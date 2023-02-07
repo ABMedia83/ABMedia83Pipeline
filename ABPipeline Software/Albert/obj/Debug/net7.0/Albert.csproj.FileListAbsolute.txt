@@ -1,0 +1,12 @@
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\Albert\bin\Debug\net7.0\Albert.deps.json
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\Albert\bin\Debug\net7.0\Albert.dll
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\Albert\bin\Debug\net7.0\Albert.pdb
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\Albert\obj\Debug\net7.0\Albert.csproj.AssemblyReference.cache
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\Albert\obj\Debug\net7.0\Albert.GeneratedMSBuildEditorConfig.editorconfig
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\Albert\obj\Debug\net7.0\Albert.AssemblyInfoInputs.cache
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\Albert\obj\Debug\net7.0\Albert.AssemblyInfo.cs
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\Albert\obj\Debug\net7.0\Albert.csproj.CoreCompileInputs.cache
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\Albert\obj\Debug\net7.0\Albert.dll
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\Albert\obj\Debug\net7.0\refint\Albert.dll
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\Albert\obj\Debug\net7.0\Albert.pdb
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\Albert\obj\Debug\net7.0\ref\Albert.dll

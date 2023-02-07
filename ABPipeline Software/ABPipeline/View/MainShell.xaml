@@ -1,0 +1,71 @@
+﻿<local:PipelineShell x:Class="ABPipeline.View.MainShell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:c="clr-namespace:Albert.Win32.Controls;assembly=Albert.Win32"
+		xmlns:w="clr-namespace:Albert.Win32;assembly=Albert.Win32"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ABPipeline.Controls"
+        mc:Ignorable="d"
+        Title="{Binding Title}" Height="450" Width="800">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto" />
+			<RowDefinition />
+			<RowDefinition Height="auto" />
+		</Grid.RowDefinitions>
+		<!-- MenuBar -->
+		<Menu x:Name="mainMenu">
+			<MenuItem Header="File">
+				<MenuItem Command="New" />
+				<MenuItem Command="Open" />
+				<MenuItem Command="Save" />
+				<MenuItem Command="w:DesktopCommands.SaveAs" />
+				<Separator />
+				<MenuItem Command="w:DesktopCommands.Import" />
+				<MenuItem Command="w:DesktopCommands.Export" />
+				<Separator />
+				<MenuItem Command="w:DesktopCommands.Quit" />
+			</MenuItem>
+			<MenuItem Header="Edit">
+				<MenuItem Command="Cut" />
+				<MenuItem Command="Copy" />
+				<MenuItem Command="Paste" />
+				<Separator />
+				<MenuItem Command="SelectAll" />
+			</MenuItem>
+			<MenuItem Header="View">
+				<MenuItem x:Name="statusMenuItem" IsChecked="True" IsCheckable="True" Header="Show StatusBar" />
+			</MenuItem>
+			<MenuItem Header="Tools">
+				<MenuItem Command="w:DesktopCommands.LogInfo" />
+			</MenuItem>
+			<MenuItem Header="Window">
+				<MenuItem Header="Design Pipeline" Tag="Design" />
+				<MenuItem Header="Media Pipeline" Tag="Media" />
+				<MenuItem Header="Notes Pipeline" Tag="Notes" />
+				<MenuItem Header="YouTube Pipeline" Tag="YouTube" />
+			</MenuItem>
+			<MenuItem Header="Help">
+				<MenuItem Command="w:DesktopCommands.About" />
+			</MenuItem>
+
+
+		</Menu>
+
+		<!-- Frame -->
+		<c:ViewFrame x:Name="mainFrame" Grid.Row="1" />
+		<!-- Dialogs -->
+
+
+		<!-- StatusBar -->
+		
+		<StatusBar x:Name="statusBar" Grid.Row="2">
+			<TextBlock FontWeight="Black" Text="Status:" />
+			<TextBlock x:Name="statusTextBlock" />
+		</StatusBar>
+
+
+
+	</Grid>
+</local:PipelineShell>
