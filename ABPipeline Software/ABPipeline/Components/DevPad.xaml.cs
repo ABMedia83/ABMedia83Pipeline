@@ -5,7 +5,7 @@ namespace ABPipeline.Components;
 /// <summary>
 /// This Component is desgned to write code. 
 /// </summary>
-public partial class DevPad : PipelineControl 
+public sealed partial class DevPad : PipelineControl 
 {
     public DevPad()
     {

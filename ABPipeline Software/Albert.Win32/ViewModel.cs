@@ -91,13 +91,6 @@ public abstract class ViewModel : Notify, IViewModel
         p.Start();
     }
 
-
-
-
-
-
-
-    #endregion
     /// <summary>
     /// Method is used to quickly navigate the Frame Property 
     /// </summary>
@@ -107,6 +100,13 @@ public abstract class ViewModel : Notify, IViewModel
         if (Frame != null)
             Frame.Navigate(_page);
     }
+
+
+
+
+
+    #endregion
+
 
 
     #region Public Properties 

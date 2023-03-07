@@ -1,0 +1,42 @@
+﻿<local:PipelineControl x:Class="ABPipeline.Components.QuickSketch"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:c="clr-namespace:Albert.Win32.Controls;assembly=Albert.Win32"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ABPipeline.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto" />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<!-- ToolBar Area -->
+		<ToolBarTray DataContext="{StaticResource presetViewModel}">
+			<ToolBar>
+				<ComboBox x:Name="sizeComboBox" Width="140" ItemTemplate="{StaticResource presetSizes}" ItemsSource="{Binding PresetFormats}" />
+			</ToolBar>
+			<ToolBar>
+				<c:OptionButton Tag="Draw" Click="SelectType_Click" Source="/Resources/AppBar/paint.png" />
+				<c:OptionButton Tag="Erase" Click="SelectType_Click" Source="/Resources/AppBar/erase.png" />
+				<c:OptionButton Tag="EraseByStroke" Click="SelectType_Click" Source="/Resources/AppBar/line.png" />
+				<c:OptionButton Tag="Select" Click="SelectType_Click" Source="/Resources/AppBar/edit.png" />
+			</ToolBar>
+			<ToolBar>
+				<c:OptionButton Click="Opacity_Click" Tag="Pencil" Source="/Resources/AppBar/pencil.png" />
+				<c:OptionButton Click="Opacity_Click" Tag="Marker" Source="/Resources/AppBar/marker.png" />
+				<c:OptionButton  Click="Opacity_Click" Tag="Pen" Source="/Resources/AppBar/pen.png" />
+			</ToolBar>
+			<ToolBar>
+
+			</ToolBar>
+		</ToolBarTray>
+		<!-- Sketch Area -->
+		<c:ZoomBox Zoom="10" Grid.Row="1">
+			<Grid x:Name="canvasGrid" Width="1920" Height="1080" Background="{StaticResource abPaper}" >
+				<c:DrawCanvas x:Name="drawCanvas" />
+			</Grid>
+		</c:ZoomBox>
+    </Grid>
+</local:PipelineControl>

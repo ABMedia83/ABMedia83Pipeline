@@ -1,12 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
-namespace ABPipeline.Model
+using System.Diagnostics.Eventing.Reader;
+
+namespace ABPipeline.Model;
+/// <summary>
+/// Main Settings for the Shell of the Application 
+/// </summary>
+public record PipelineSettings : JsonRecord
 {
-    internal class PipelineSettings
-    {
-    }
+    public WindowState WindowState { get; init; }
+    public bool ShowStatusBar { get; init; }
+    public string? QuickNote { get; init; }
+    public PipelineState State {get; init; }
+    public ModelList<LogRecord>? Logs { get; init; }
+    public ModelList<FileRecord>? RecentFiles { get; init; }
 }

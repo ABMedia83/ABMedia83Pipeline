@@ -16,7 +16,10 @@
 		</Grid.RowDefinitions>
 		<!-- Toolbar Section -->
 		<ToolBarTray>
-			
+			<ToolBar>
+				<ComboBox x:Name="fontComboBox" Width="140" ToolTip="Choose your Font Type" />
+				<Slider x:Name="fontSizeSlider" Value="18" Minimum="15" Maximum="150" ToolTip="Choose the Font Size" />
+			</ToolBar>
 		</ToolBarTray>
 		
 		<!-- Text Editor -->

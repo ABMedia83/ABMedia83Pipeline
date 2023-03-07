@@ -29,7 +29,7 @@ public class PipelineControl: ViewControl, IPipelineBase
         });
     }
     /// <summary>
-    /// Get or set the Proect Type
+    /// Get or set the  name of the  Proect Type
     /// </summary>
     public string? ProjectType { get; set; }
 }

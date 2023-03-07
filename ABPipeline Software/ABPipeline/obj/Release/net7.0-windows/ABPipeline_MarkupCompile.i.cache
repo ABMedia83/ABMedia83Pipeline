@@ -10,11 +10,11 @@ none
 false
 TRACE;RELEASE;NET;NET7_0;NETCOREAPP
 C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\App.xaml
-6897072034
+20714678343
 4-2056183306
-14-1809325715
-238-1120297782
-Components\DevPad.xaml;Resources\Styles\DataTemp.xaml;Resources\Styles\Defaults.xaml;Resources\Styles\ReStyle.xaml;Resources\Styles\UI.xaml;View\MainShell.xaml;
+32202237180
+238-826507729
+Components\ConceptPad.xaml;Components\DevPad.xaml;Components\MemePad.xaml;Components\PDFNote.xaml;Components\QuickSketch.xaml;Components\RichhTextPad.xaml;Components\RichTextPad.xaml;Components\SketchPad.xaml;Components\WebPad.xaml;Components\WriterPad.xaml;Components\YouTubePad.xaml;Resources\Styles\DataTemp.xaml;Resources\Styles\Defaults.xaml;Resources\Styles\ReStyle.xaml;Resources\Styles\UI.xaml;View\CodePipeline.xaml;View\DesignPipeline.xaml;View\MainShell.xaml;View\NotesPipeline.xaml;View\WebPipeline.xaml;
 resources\images\splashscreen.png
-False
+True
 

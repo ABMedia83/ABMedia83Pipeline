@@ -148,7 +148,7 @@
 		<Setter Property="FontSize" Value="14pt" />
 		<Setter Property="Foreground" Value="{StaticResource ABForeground}" />
 		<Setter Property="Background" Value="{StaticResource Primary}" />
-		<Setter Property="BackgroundSelected" Value="{StaticResource Accent2}" />
+		<Setter Property="BackgroundSelected" Value="{StaticResource abAccent4}" />
 
 	</Style>
 
@@ -184,12 +184,14 @@
 	</Style>
 
 	<Style TargetType="c:OptionButton" x:Key="optNew" BasedOn="{StaticResource optBase}">
-		<Setter Property="Width" Value="300" />
+		<Setter Property="Width" Value="350" />
 		<Setter Property="Height" Value="80" />
+		<Setter Property="FontSize" Value="25" />
+	
 		<Setter Property="BorderThickness" Value="2.8" />
 		<Setter Property="Background" Value="{StaticResource abRadialChrome4}" />
 		<Setter Property="BackgroundMouseOver" Value="{StaticResource Accent}" />
-		<Setter Property="BackgroundChecked" Value="{StaticResource Accent2}" />
+		<Setter Property="BackgroundChecked" Value="{StaticResource abAccent3}" />
 		<Setter Property="ForegroundChecked" Value="{StaticResource ABForeground}" />
 	</Style>
 

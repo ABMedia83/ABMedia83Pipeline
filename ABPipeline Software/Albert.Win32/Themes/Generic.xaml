@@ -17,11 +17,11 @@
 	
 	
 	<!--#region ViewControlWithTItle -->
-	<Style TargetType="desktop:ViewTitleControl">
+	<Style TargetType="desktop:TitleControl">
 
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate TargetType="desktop:ViewTitleControl">
+				<ControlTemplate TargetType="desktop:TitleControl">
 					<Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
 						<Grid>
 							<Grid.RowDefinitions>

@@ -10,9 +10,63 @@
     <Compile Update="Components\DevPad.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Components\MemePad.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Components\PDFNote.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Components\QuickSketch.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Components\RichhTextPad.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Components\RichTextPad.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Components\WebPad.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Components\YouTubePad.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\CodePipeline.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\DesignPipeline.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\NotesPipeline.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\WebPipeline.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Components\DevPad.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Components\MemePad.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Components\PDFNote.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Components\QuickSketch.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Components\RichhTextPad.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Components\RichTextPad.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Components\WebPad.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Components\YouTubePad.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Styles\DataTemp.xaml">
@@ -25,6 +79,18 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Resources\Styles\UI.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\CodePipeline.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\DesignPipeline.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\NotesPipeline.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\WebPipeline.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -35,16 +35,17 @@
 				<MenuItem Command="SelectAll" />
 			</MenuItem>
 			<MenuItem Header="View">
-				<MenuItem x:Name="statusMenuItem" IsChecked="True" IsCheckable="True" Header="Show StatusBar" />
+				<MenuItem x:Name="statusMenuItem" Click="ShowStatus_Click"  IsChecked="True" IsCheckable="True" Header="Show StatusBar" />
 			</MenuItem>
 			<MenuItem Header="Tools">
 				<MenuItem Command="w:DesktopCommands.LogInfo" />
 			</MenuItem>
 			<MenuItem Header="Window">
-				<MenuItem Header="Design Pipeline" Tag="Design" />
-				<MenuItem Header="Media Pipeline" Tag="Media" />
-				<MenuItem Header="Notes Pipeline" Tag="Notes" />
-				<MenuItem Header="YouTube Pipeline" Tag="YouTube" />
+				<MenuItem Click="Window_Click" Header="Design Pipeline" Tag="Design" />
+				<MenuItem Click="Window_Click" Header="Media Pipeline" Tag="Media" />
+				<MenuItem Click="Window_Click" Header="Notes Pipeline" Tag="Notes" />
+				<MenuItem Click="Window_Click" Header="Web Pipeline" Tag="Web" />
+				<MenuItem Click="Window_Click" Header="YouTube Pipeline" Tag="YouTube" />
 			</MenuItem>
 			<MenuItem Header="Help">
 				<MenuItem Command="w:DesktopCommands.About" />
@@ -56,7 +57,39 @@
 		<!-- Frame -->
 		<c:ViewFrame x:Name="mainFrame" Grid.Row="1" />
 		<!-- Dialogs -->
-
+		<c:ViewDialog Grid.Row="1" x:Name="newDialog" IsButtonsHidden="True">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition />
+					<ColumnDefinition />
+					<ColumnDefinition />
+				</Grid.ColumnDefinitions>
+				<c:TitleControl FontWeight="Black" FontSize="30" Title="Design">
+					<WrapPanel>
+						<c:OptionButton Click="New_Cick" Style="{StaticResource  optNew}" Content="New SketchPad Project" />
+						<c:OptionButton Click="New_Cick" Style="{StaticResource  optNew}" Content="New Concept Project" />
+						<c:OptionButton Click="New_Cick" Style="{StaticResource  optNew}" Content="New Theme Project" />
+					</WrapPanel>
+				</c:TitleControl>
+				<c:TitleControl FontWeight="Black" FontSize="30" Title="Notes" Grid.Column="1" >
+					<WrapPanel>
+						<c:OptionButton Click="New_Cick" Style="{StaticResource  optNew}" Content="New DevPad Project" />
+						<c:OptionButton Click="New_Cick" Style="{StaticResource  optNew}" Content="New RichTextPad Project" />
+						<c:OptionButton Click="New_Cick" Style="{StaticResource  optNew}" Content="New WriterPad Project" />
+						
+				
+					</WrapPanel>
+				</c:TitleControl>
+				<c:TitleControl FontWeight="Black" FontSize="30" Title="Web" Grid.Column="2" >
+					<WrapPanel>
+						<c:OptionButton Click="New_Cick" Style="{StaticResource  optNew}" Content="New PDFPad Project" />
+						<c:OptionButton Click="New_Cick" Style="{StaticResource optNew}" Content="New WebPad Proect" />
+						<c:OptionButton Click="New_Cick" Style="{StaticResource  optNew}" Content="New YoutubePad Project" />
+					
+					</WrapPanel>
+				</c:TitleControl>
+			</Grid>
+		</c:ViewDialog>
 
 		<!-- StatusBar -->
 		

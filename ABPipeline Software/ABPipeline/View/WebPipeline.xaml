@@ -1,0 +1,67 @@
+﻿<local:PipelinePage x:Class="ABPipeline.View.WebPipeline"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ABPipeline.Controls"
+      xmlns:c="clr-namespace:Albert.Win32.Controls;assembly=Albert.Win32"
+	  xmlns:cp="clr-namespace:ABPipeline.Components"
+	  xmlns:ic="http://icsharpcode.net/sharpdevelop/avalonedit"
+	 mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="WebPipeline">
+
+    <Grid>
+		<TabControl x:Name="webTabControl">
+
+			<c:ViewTabItem ToolTip="YouTube Setup" Header="YT Setup">
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition />
+						<ColumnDefinition Width="30" />
+						<ColumnDefinition />
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="auto" />
+						<RowDefinition />
+						<RowDefinition Height="30" />
+						<RowDefinition />
+					</Grid.RowDefinitions>
+					<!-- ToolBar -->
+					<ToolBarTray DataContext="{StaticResource presetViewModel}" Grid.ColumnSpan="3" >
+						<ToolBar>
+							<ComboBox ItemsSource="{Binding NoteFontPresets }" ItemTemplate="{StaticResource basicList}" x:Name="fontComboBox" Width="140" />
+							<Slider x:Name="fontSizeSlider" Value="18" Minimum="15" Maximum="150" />
+						</ToolBar>
+					</ToolBarTray>
+					<!-- Descrption -->
+					<c:TitleControl Grid.Row="1" Grid.RowSpan="3" Title="Description:">
+						<c:WriterBox x:Name="descriptionWriterBox" />
+					</c:TitleControl>
+
+					<!--Grid Spliter -->
+					<GridSplitter Grid.Row="1" Grid.RowSpan="3" Grid.Column="1" />
+					
+					<!-- Tags -->
+					<c:TitleControl Title="Tags:" Grid.Row="1" Grid.Column="2">
+						<c:WriterBox x:Name="tagsWriterBox" />
+					</c:TitleControl>
+					<GridSplitter Grid.Row="2" Grid.Column="2" Style="{StaticResource horzSplit}" />
+					<!-- Comment -->
+					<c:TitleControl Title="Comment:" Grid.Row="3" Grid.Column="2">
+						<c:WriterBox x:Name="commentWriterBox" />
+					</c:TitleControl>
+
+
+				</Grid>
+			</c:ViewTabItem>
+			
+			<c:ViewTabItem Header="Quick SkeTitletch">
+				<cp:QuickSketch />
+			</c:ViewTabItem>
+			
+		</TabControl>
+		
+        
+    </Grid>
+</local:PipelinePage>
