@@ -6,7 +6,14 @@ public sealed class PresetViewModel : ViewModel
 {
     #region PreMade Lists 
 
-
+    public ModelList<BasicItem> YoutubeThumbnailPreset => new()
+    {
+        new("Template 1", "YoutubeOne"),
+        new("Template 2", "YoutubeTwo"),
+        new("Template 3", "YoutubeThree"),
+        new("Template 4", "YoutubeNoContent"),
+         new("Template 5", "YoutubeNoTopic"),
+    };
 
     /// <summary>
     /// Prest FontFamiles to use in Application 
@@ -76,6 +83,8 @@ public sealed class PresetViewModel : ViewModel
 
     public ModelList<BrushItem> PresetBackgroundBrushes => new()
     {
+        new("Primary", (SolidColorBrush)App.Current.Resources["Primary"]),
+          new("Secondary", (SolidColorBrush)App.Current.Resources["Secondary"]),
         new("Accent", (SolidColorBrush)App.Current.Resources["abAccent"]),
         new("Accent2", (SolidColorBrush)App.Current.Resources["abAccent2"]),
         new("Accent3", (SolidColorBrush)App.Current.Resources["abAccent3"]),

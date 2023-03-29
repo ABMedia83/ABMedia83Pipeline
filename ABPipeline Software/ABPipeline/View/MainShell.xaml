@@ -38,14 +38,16 @@
 				<MenuItem x:Name="statusMenuItem" Click="ShowStatus_Click"  IsChecked="True" IsCheckable="True" Header="Show StatusBar" />
 			</MenuItem>
 			<MenuItem Header="Tools">
+				<MenuItem Command="w:DesktopCommands.RunConsole" />
 				<MenuItem Command="w:DesktopCommands.LogInfo" />
 			</MenuItem>
 			<MenuItem Header="Window">
+				<MenuItem Click="Window_Click" Header="Code Pipeline" Tag="Code" />
 				<MenuItem Click="Window_Click" Header="Design Pipeline" Tag="Design" />
 				<MenuItem Click="Window_Click" Header="Media Pipeline" Tag="Media" />
 				<MenuItem Click="Window_Click" Header="Notes Pipeline" Tag="Notes" />
 				<MenuItem Click="Window_Click" Header="Web Pipeline" Tag="Web" />
-				<MenuItem Click="Window_Click" Header="YouTube Pipeline" Tag="YouTube" />
+	
 			</MenuItem>
 			<MenuItem Header="Help">
 				<MenuItem Command="w:DesktopCommands.About" />
@@ -73,7 +75,7 @@
 				</c:TitleControl>
 				<c:TitleControl FontWeight="Black" FontSize="30" Title="Notes" Grid.Column="1" >
 					<WrapPanel>
-						<c:OptionButton Click="New_Cick" Style="{StaticResource  optNew}" Content="New DevPad Project" />
+				
 						<c:OptionButton Click="New_Cick" Style="{StaticResource  optNew}" Content="New RichTextPad Project" />
 						<c:OptionButton Click="New_Cick" Style="{StaticResource  optNew}" Content="New WriterPad Project" />
 						
@@ -82,9 +84,8 @@
 				</c:TitleControl>
 				<c:TitleControl FontWeight="Black" FontSize="30" Title="Web" Grid.Column="2" >
 					<WrapPanel>
-						<c:OptionButton Click="New_Cick" Style="{StaticResource  optNew}" Content="New PDFPad Project" />
-						<c:OptionButton Click="New_Cick" Style="{StaticResource optNew}" Content="New WebPad Proect" />
-						<c:OptionButton Click="New_Cick" Style="{StaticResource  optNew}" Content="New YoutubePad Project" />
+						<c:OptionButton Click="New_Cick" Tag="DevPad" Style="{StaticResource  optNew}" Content="New DevPad Project" />
+						<c:OptionButton Click="New_Cick" Tag="YouTubePad" Style="{StaticResource  optNew}" Content="New YoutubePad Project" />
 					
 					</WrapPanel>
 				</c:TitleControl>

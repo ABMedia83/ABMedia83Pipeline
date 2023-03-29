@@ -660,6 +660,23 @@
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
       },
+      "ABPipelineCMD/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Albert": "1.0.0",
+          "Albert.Win32": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ABPipelineCMD.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ABPipelineCMD.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
       "Albert/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -1668,6 +1685,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "ABPipelineCMD/1.0.0": {
+      "type": "project",
+      "path": "../ABPipelineCMD/ABPipelineCMD.csproj",
+      "msbuildProject": "../ABPipelineCMD/ABPipelineCMD.csproj"
+    },
     "Albert/1.0.0": {
       "type": "project",
       "path": "../Albert/Albert.csproj",
@@ -1681,6 +1703,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0-windows7.0": [
+      "ABPipelineCMD >= 1.0.0",
       "Albert >= 1.0.0",
       "Albert.Win32 >= 1.0.0",
       "AvalonEdit >= 6.2.0.78",
@@ -1724,6 +1747,9 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
+            "C:\\AMB\\Git\\ABMedia83Pipeline\\ABPipeline Software\\ABPipelineCMD\\ABPipelineCMD.csproj": {
+              "projectPath": "C:\\AMB\\Git\\ABMedia83Pipeline\\ABPipeline Software\\ABPipelineCMD\\ABPipelineCMD.csproj"
+            },
             "C:\\AMB\\Git\\ABMedia83Pipeline\\ABPipeline Software\\Albert.Win32\\Albert.Win32.csproj": {
               "projectPath": "C:\\AMB\\Git\\ABMedia83Pipeline\\ABPipeline Software\\Albert.Win32\\Albert.Win32.csproj"
             },
@@ -1779,7 +1805,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

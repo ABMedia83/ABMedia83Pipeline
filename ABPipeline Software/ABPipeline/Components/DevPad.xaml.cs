@@ -42,6 +42,9 @@ public sealed partial class DevPad : PipelineControl
     {
         InitializeComponent();
         Init();
+        CreateTab(_tab, _info, Close);  
+        //Load Text File 
+        codeTextEditor.Text = ReadAllText(_info.FullName);
 
     }
 

@@ -69,6 +69,10 @@
     <None Remove="Resources\AppBar\triangle.png" />
     <None Remove="Resources\AppBar\underline.png" />
     <None Remove="Resources\AppBar\writericon.png" />
+    <None Remove="Resources\Images\ABLogo.png" />
+    <None Remove="Resources\Images\ABPaint_1.png" />
+    <None Remove="Resources\Images\ABPaint_2.png" />
+    <None Remove="Resources\Images\ABPaint_3.png" />
     <None Remove="Resources\Images\ABPipeline.png" />
     <None Remove="Resources\Images\SplashScreen.png" />
   </ItemGroup>
@@ -85,6 +89,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ABPipelineCMD\ABPipelineCMD.csproj" />
     <ProjectReference Include="..\Albert.Win32\Albert.Win32.csproj" />
     <ProjectReference Include="..\Albert\Albert.csproj" />
   </ItemGroup>
@@ -150,7 +155,11 @@
     <Resource Include="Resources\AppBar\triangle.png" />
     <Resource Include="Resources\AppBar\underline.png" />
     <Resource Include="Resources\AppBar\writericon.png" />
+    <Resource Include="Resources\Images\ABPaint_1.png" />
+    <Resource Include="Resources\Images\ABPaint_2.png" />
+    <Resource Include="Resources\Images\ABPaint_3.png" />
     <Resource Include="Resources\Images\ABPipeline.png" />
+    <Resource Include="Resources\Images\ABLogo.png" />
   </ItemGroup>
 
   <ItemGroup>

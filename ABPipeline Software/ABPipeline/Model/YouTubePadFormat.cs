@@ -10,6 +10,11 @@ public sealed record YouTubePadFormat : JsonRecord
     public string? Desciptionn { get; init; }
     public string? Tags { get; init; }
     public string? Comment { get; init; }
+    public string? ThumbTitle { get; init; }
+    public string? ThumbContent { get; init; }
+    public string? ThumbFooter { get; init; }
+    public string? TopicSource { get; init; }
+    public string? LogoSource { get; init; }
     public string? FontFamily { get; init; }
     public double FontSize { get; init; }
 }

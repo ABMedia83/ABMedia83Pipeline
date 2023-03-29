@@ -18,17 +18,18 @@
 				<ComboBox x:Name="sizeComboBox" Width="140" ItemTemplate="{StaticResource presetSizes}" ItemsSource="{Binding PresetFormats}" />
 			</ToolBar>
 			<ToolBar>
-				<c:OptionButton Tag="Draw" Click="SelectType_Click" Source="/Resources/AppBar/paint.png" />
-				<c:OptionButton Tag="Erase" Click="SelectType_Click" Source="/Resources/AppBar/erase.png" />
-				<c:OptionButton Tag="EraseByStroke" Click="SelectType_Click" Source="/Resources/AppBar/line.png" />
-				<c:OptionButton Tag="Select" Click="SelectType_Click" Source="/Resources/AppBar/edit.png" />
+				<c:OptionButton ToolTip="Draw" Tag="Draw" Click="SelectType_Click" Source="/Resources/AppBar/paint.png" />
+				<c:OptionButton ToolTip="Erase"  Tag="Erase" Click="SelectType_Click" Source="/Resources/AppBar/erase.png" />
+				<c:OptionButton ToolTip="Erase byy Stroke"  Tag="EraseByStroke" Click="SelectType_Click" Source="/Resources/AppBar/line.png" />
+				<c:OptionButton ToolTip="Select" Tag="Select" Click="SelectType_Click" Source="/Resources/AppBar/edit.png" />
 			</ToolBar>
 			<ToolBar>
-				<c:OptionButton Click="Opacity_Click" Tag="Pencil" Source="/Resources/AppBar/pencil.png" />
-				<c:OptionButton Click="Opacity_Click" Tag="Marker" Source="/Resources/AppBar/marker.png" />
-				<c:OptionButton  Click="Opacity_Click" Tag="Pen" Source="/Resources/AppBar/pen.png" />
+				<c:OptionButton Click="Opacity_Click" ToolTip="Pencil" Tag="Pencil" Source="/Resources/AppBar/pencil.png" />
+				<c:OptionButton Click="Opacity_Click" ToolTip="Marker" Tag="Marker" Source="/Resources/AppBar/marker.png" />
+				<c:OptionButton  Click="Opacity_Click" ToolTip="Pen" Tag="Pen" Source="/Resources/AppBar/pen.png" />
 			</ToolBar>
 			<ToolBar>
+				<Slider x:Name="brushSIzeSlider" ToolTip="Choose your Brush Size" Minimum="3" Value="15" Maximum="150" />
 
 			</ToolBar>
 		</ToolBarTray>

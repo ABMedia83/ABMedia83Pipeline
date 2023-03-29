@@ -10,7 +10,8 @@ namespace ABPipeline.ViewModels;
 public sealed class PipelineViewModel : ViewModel
 {
     #region Field's 
-    TabControl? designTab, mediaTab, noteTab, webTab;
+    WebPipelineSettings? websettings;
+    TabControl? designTab, mediaTab, noteTab, codeTab, webTab;
     ModelList<ColorItem>? colors = new();
     ModelList<ThemeItem>? themes = new();
     ModelList<FontItem>? fonts = new();
@@ -36,6 +37,12 @@ public sealed class PipelineViewModel : ViewModel
         set { noteTab = value; OnPropertyChanged("NoteTab"); }
     }
 
+    public TabControl? CodeTab
+    {
+        get => codeTab;
+        set { codeTab = value; OnPropertyChanged("CodeTab"); }
+    }
+
     public TabControl? WebTab
     {
         get  => webTab;  
@@ -46,7 +53,14 @@ public sealed class PipelineViewModel : ViewModel
 
     #endregion
 
-    #region Dynamic List Properties 
+    #region Dynamic Properties 
+
+    public WebPipelineSettings WebSettings
+    {
+        get => websettings;
+        set { websettings = value; OnPropertyChanged("WebSettings"); }
+    }
+
     /// <summary>
     /// Get or set Colors you want to use 
     /// </summary>
@@ -79,7 +93,7 @@ public sealed class PipelineViewModel : ViewModel
 
     public static string mainSettingsPath => "settings.json";
 
-    public static string youTubeSettingsPath = "youtubeSettings.json";
+    public static string webPipelinePath = "websettings.json";
 
 
     #endregion
@@ -132,10 +146,16 @@ public sealed class PipelineViewModel : ViewModel
 
     public static string? mainsettings => "settings.json";
     public static string? webpipelinesettings => "webpipeline.json";
-    
+
     #endregion
 
     #region  Default Pages 
+
+    /// <summary>
+    /// Get the Code Pipeline Paage 
+    /// </summary>
+    public static CodePipeline? CodePipeLine { get; set; } = App.AppHost?.Services.GetService<CodePipeline>();
+
     /// <summary>
     ///Gets the Design Pipeline Page 
     /// </summary>

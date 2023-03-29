@@ -36,17 +36,7 @@ public class ViewControl : ContentControl, IAddCommand
 
 
     #region Tab and Initialize Method's 
-    public void FrameInit(Frame _frame)
-    {
-        //Clean up if already use
-        if(TabItem != null)
-        {
-            TabItem.Content = null;
-        }
-        Page = new ViewPage();
-        Page.Content = this;
-        _frame.Navigate(Page);
-    }
+
     /// <summary>
     /// Method to Quickly Initialize TabItem, and decide rather or not you can remove the tab 
     /// </summary>
@@ -55,11 +45,7 @@ public class ViewControl : ContentControl, IAddCommand
     /// <param name="_tab"></param>
     public void CreateTab(string _header, bool _isClosedEnabled, TabControl _tab)
     {
-        //Clean up if page is active 
-        if(Page != null)
-        {
-            Page.Content = null;
-        }
+
 
         //Create a new TabItem 
         TabItem = new ViewTabItem(_header, _isClosedEnabled, this, _tab);
@@ -76,17 +62,14 @@ public class ViewControl : ContentControl, IAddCommand
     /// <param name="__method">Close Method</param>
     public void CreateTab(TabControl _tab, FileInfo _info, Action __method)
     {
-        if (Page != null)
-        {
-            Page.Content = null;
-        }
-
+  
         FileInfo = _info;
         CurrentFile = _info.FullName;
 
         //Create a new TabItem 
         TabItem = new ViewTabItem(_info.Name, this, _tab);
         CurrentFile = _info.FullName;
+        FileInfo = _info;
         //Close Method 
         TabItem.Closed += (sender, e) =>
         {
@@ -106,10 +89,7 @@ public class ViewControl : ContentControl, IAddCommand
     /// <param name="_closeMethod"></param>
     public void CreateTab(string _header, TabControl _tab, Action _closeMethod)
     {
-        if (Page != null)
-        {
-            Page.Content = null;
-        }
+    
         //Create a new TabItem 
         TabItem = new ViewTabItem(_header, this, _tab);
 
@@ -223,13 +203,6 @@ public class ViewControl : ContentControl, IAddCommand
     #endregion 
 
 
-
-
-
-
-
-
-
     #region Main Public Properties
 
     /// <summary>
@@ -273,10 +246,7 @@ public class ViewControl : ContentControl, IAddCommand
         set { SetValue(BottomDialogVisibilityProperty, value); }
     }
 
-    /// <summary>
-    /// Gets or sets a Page that ueses the ViewControl
-    /// </sBoxummary>
-    public ViewPage? Page { get; set; }
+
 
     /// <summary>
     /// Gets or sets the TabItem that uses the ViewControl 

@@ -1,10 +1,6 @@
-﻿using System;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Media;
-namespace Albert.Win32.Controls
+﻿namespace Albert.Win32.Controls
 {
-	public class OptionButton: RadioButton
+    public class OptionButton: RadioButton
 	{
 		public OptionButton()
 		{

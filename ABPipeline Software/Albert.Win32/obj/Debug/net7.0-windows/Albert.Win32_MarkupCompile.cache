@@ -1,10 +1,10 @@
 ﻿Albert.Win32
-1.0.0.0
+
 
 library
 C#
 .cs
-c:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\Albert.Win32\obj\Debug\net7.0-windows\
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\Albert.Win32\obj\Debug\net7.0-windows\
 Albert.Win32
 none
 false
@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 
 1204305769
 
-41-1480856108
-199-1235223151
+40855932492
+1991237955901
 Themes\Generic.xaml;
 
-True
+False
 

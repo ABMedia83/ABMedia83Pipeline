@@ -10,11 +10,11 @@ none
 false
 TRACE;RELEASE;NET;NET7_0;NETCOREAPP
 C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\App.xaml
-20714678343
+191114270344
 4-2056183306
-30-1335055389
-238-826507729
-Components\ConceptPad.xaml;Components\DevPad.xaml;Components\MemePad.xaml;Components\PDFNote.xaml;Components\QuickSketch.xaml;Components\RichhTextPad.xaml;Components\RichTextPad.xaml;Components\SketchPad.xaml;Components\WebPad.xaml;Components\WriterPad.xaml;Components\YouTubePad.xaml;Resources\Styles\DataTemp.xaml;Resources\Styles\Defaults.xaml;Resources\Styles\ReStyle.xaml;Resources\Styles\UI.xaml;View\CodePipeline.xaml;View\DesignPipeline.xaml;View\MainShell.xaml;View\NotesPipeline.xaml;View\WebPipeline.xaml;
+29-1532743917
+239677759785
+Components\ConceptPad.xaml;Components\DevPad.xaml;Components\MemePad.xaml;Components\QuickSketch.xaml;Components\RichhTextPad.xaml;Components\RichTextPad.xaml;Components\WriterPad.xaml;Components\YouTubePad.xaml;Resources\Styles\DataTemp.xaml;Resources\Styles\Defaults.xaml;Resources\Styles\ReStyle.xaml;Resources\Styles\ThumbnailTypes.xaml;Resources\Styles\UI.xaml;View\CodePipeline.xaml;View\DesignPipeline.xaml;View\MainShell.xaml;View\NotesPipeline.xaml;View\PipelineSettingsPage.xaml;View\WebPipeline.xaml;
 resources\images\splashscreen.png
 False
 

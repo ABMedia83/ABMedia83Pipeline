@@ -11,6 +11,7 @@
 				<ResourceDictionary Source="/Resources/Styles/DataTemp.xaml" />
 				<ResourceDictionary Source="/Resources/Styles/ReStyle.xaml" />
 				<ResourceDictionary Source="/Resources/Styles/UI.xaml" />
+				<ResourceDictionary Source="/Resources/Styles/ThumbnailTypes.xaml" />
 			</ResourceDictionary.MergedDictionaries>
 		</ResourceDictionary>
 		

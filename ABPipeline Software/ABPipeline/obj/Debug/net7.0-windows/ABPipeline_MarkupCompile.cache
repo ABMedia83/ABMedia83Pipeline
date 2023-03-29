@@ -1,0 +1,20 @@
+﻿ABPipeline
+
+
+winexe
+C#
+.cs
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\obj\Debug\net7.0-windows\
+ABPipeline
+none
+false
+TRACE;DEBUG;NET;NET7_0;NETCOREAPP
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\App.xaml
+20714678343
+4-2056183306
+311351062907
+239-218539195
+Components\ConceptPad.xaml;Components\DevPad.xaml;Components\MemePad.xaml;Components\PDFNote.xaml;Components\QuickSketch.xaml;Components\RichhTextPad.xaml;Components\RichTextPad.xaml;Components\SketchPad.xaml;Components\WebPad.xaml;Components\WriterPad.xaml;Components\YouTubePad.xaml;Resources\Styles\DataTemp.xaml;Resources\Styles\Defaults.xaml;Resources\Styles\ReStyle.xaml;Resources\Styles\UI.xaml;View\CodePipeline.xaml;View\DesignPipeline.xaml;View\MainShell.xaml;View\NotesPipeline.xaml;View\WebPipeline.xaml;
+resources\images\splashscreen.png
+False
+

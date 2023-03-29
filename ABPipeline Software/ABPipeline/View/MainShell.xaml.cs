@@ -1,5 +1,7 @@
 ﻿
 
+using System.Diagnostics;
+
 namespace ABPipeline.View;
 
 /// <summary>
@@ -53,10 +55,38 @@ public sealed partial class MainShell : PipelineShell
 
         AddCommand(ApplicationCommands.Open, (sender, e) =>
         {
+            OpenDialogTask("Open File", filterAll, (o, i) =>
+            {
+                try
+                {
+                    foreach (string file in o.FileNames)
+                    {
 
+                        FileInfo? info = new FileInfo(file);
+                        switch (info.Extension)
+                        {
+                            default:
+                                var devFile = new DevPad(Pipeline!.CodeTab!, info);
+                                State = PipelineState.Code;
+                                break;
+                        }
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Could not load file.");
+                }
+            });
         });
 
 
+        AddCommand(DesktopCommands.RunConsole, (sender, e) =>
+        {
+            //Run ABPipelineCMD.exe 
+            Pipeline.RunExeFile("ABPipelineCMD.exe");
+        });
+
+        //Add Quit Command
         AddCommand(DesktopCommands.Quit, (sender, e) =>
         {
             Close();
@@ -98,16 +128,10 @@ public sealed partial class MainShell : PipelineShell
 
         switch (item.Tag)
         {
-            case "Design":
-                State = PipelineState.Design;
-                break;
-      
-            case "Notes":
-                State = PipelineState.Notes;
-                break;
-            case "Web":
-                State = PipelineState.Web;
-                break;
+            case "Code": State = PipelineState.Code; break;
+            case "Design":State = PipelineState.Design; break;
+            case "Notes": State = PipelineState.Notes; break;
+            case "Web": State = PipelineState.Web; break;
           
         }
 
@@ -122,17 +146,18 @@ public sealed partial class MainShell : PipelineShell
         switch (opt!.Tag)
         {
             case "DevPad":
-
+                DevPad devpad = new(Pipeline!.WebTab!);
+                State = PipelineState.Web;
                 break;
             case "WriterPad":
 
                 break;
             case "YouTubePad":
+                YouTubePad youtube = new(Pipeline!.WebTab!);
+                State = PipelineState.Web;
 
                 break;
-            case "YouTube Tumbniail":
-
-                break;
+          
         }
 
         newDialog.Hide();
@@ -155,8 +180,9 @@ public sealed partial class MainShell : PipelineShell
 
         //Save your Pipeline Settings 
         WriteToJsonFile(settings, _filePath);
+
         //Export your other settings here 
-       
+        WebPipeLine!.ExportSettings(webPipelinePath);
 
 
     }
@@ -178,7 +204,8 @@ public sealed partial class MainShell : PipelineShell
                 false => statusBar.Visibility = Visibility.Collapsed,
             };
 
-
+            //Import Other settings 
+            WebPipeLine!.ImportSettings(webPipelinePath);
 
    
         }
@@ -193,6 +220,16 @@ public sealed partial class MainShell : PipelineShell
 
             switch (value)
             {
+
+                case PipelineState.Code:
+                    //Go to the Code Pipeline Page 
+                    Pipeline!.NavigateFrame(CodePipeLine!);
+                    //Send a message to the Applicaton 
+                    Pipeline.Message("You're in the Code Pipeline.", false);
+                    //Change the Window/Shell Title 
+                    Pipeline.Title = "ABPipeline - Code";
+
+                    break;
                 case PipelineState.Design:
                     //Go to the Design Pipeline Page 
                     Pipeline!.NavigateFrame(DesignPipeLine!);

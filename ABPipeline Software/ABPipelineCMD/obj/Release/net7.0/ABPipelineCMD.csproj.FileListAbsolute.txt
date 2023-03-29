@@ -1,0 +1,15 @@
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipelineCMD\bin\Release\net7.0\ABPipelineCMD.exe
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipelineCMD\bin\Release\net7.0\ABPipelineCMD.deps.json
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipelineCMD\bin\Release\net7.0\ABPipelineCMD.runtimeconfig.json
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipelineCMD\bin\Release\net7.0\ABPipelineCMD.dll
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipelineCMD\bin\Release\net7.0\ABPipelineCMD.pdb
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipelineCMD\obj\Release\net7.0\ABPipelineCMD.csproj.AssemblyReference.cache
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipelineCMD\obj\Release\net7.0\ABPipelineCMD.GeneratedMSBuildEditorConfig.editorconfig
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipelineCMD\obj\Release\net7.0\ABPipelineCMD.AssemblyInfoInputs.cache
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipelineCMD\obj\Release\net7.0\ABPipelineCMD.AssemblyInfo.cs
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipelineCMD\obj\Release\net7.0\ABPipelineCMD.csproj.CoreCompileInputs.cache
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipelineCMD\obj\Release\net7.0\ABPipelineCMD.dll
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipelineCMD\obj\Release\net7.0\refint\ABPipelineCMD.dll
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipelineCMD\obj\Release\net7.0\ABPipelineCMD.pdb
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipelineCMD\obj\Release\net7.0\ABPipelineCMD.genruntimeconfig.cache
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipelineCMD\obj\Release\net7.0\ref\ABPipelineCMD.dll

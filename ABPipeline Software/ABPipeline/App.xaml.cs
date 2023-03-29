@@ -23,14 +23,11 @@ public partial class App : Application
              services.AddSingleton<PipelineViewModel>();
 
              //Add Page services 
+             services.AddSingleton<CodePipeline>();
              services.AddSingleton<DesignPipeline>();
              services.AddSingleton<NotesPipeline>();
              services.AddSingleton<WebPipeline>();
 
-
-             //Add Compoent services 
-             services.AddTransient<DevPad>();
-             services.AddTransient<YouTubePad>();
 
 
          })

@@ -4,7 +4,13 @@ namespace ABPipeline.Controls;
 
 public enum PipelineState
 {
-    Code,Design,Notes,Web
+    Code,Design,Notes,Web,PDFViewer,WebViewer
+}
+
+
+public enum PDFViewMode
+{
+    PDF,Notes, Split 
 }
 
 

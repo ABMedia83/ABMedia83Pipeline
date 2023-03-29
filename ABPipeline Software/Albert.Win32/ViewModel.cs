@@ -84,7 +84,7 @@ public abstract class ViewModel : Notify, IViewModel
     /// Method allows the ViewModel to run other .exe on the system 
     /// </summary>
     /// <param name="exeFile">File path of the .exe file</param>
-    public static void RunExeFile(string exeFile)
+    public void RunExeFile(string exeFile)
     {
         Process p = new Process();
         p.StartInfo.FileName = exeFile;

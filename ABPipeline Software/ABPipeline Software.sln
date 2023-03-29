@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ABPipeline", "ABPipeline\ABPipeline.csproj", "{BF25FA76-21A8-4876-90EF-61D4B345A57B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ABPipeline", "ABPipeline\ABPipeline.csproj", "{BF25FA76-21A8-4876-90EF-61D4B345A57B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Albert", "Albert\Albert.csproj", "{A507D116-C3B0-439B-AFD9-71D7D860356B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albert", "Albert\Albert.csproj", "{A507D116-C3B0-439B-AFD9-71D7D860356B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albert.Win32", "Albert.Win32\Albert.Win32.csproj", "{0043FABF-8F8F-4AA6-B95A-DAAF50B2390E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ABPipelineCMD", "ABPipelineCMD\ABPipelineCMD.csproj", "{8D4D6989-BAEF-4E81-AD72-9058EBC7B911}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{0043FABF-8F8F-4AA6-B95A-DAAF50B2390E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0043FABF-8F8F-4AA6-B95A-DAAF50B2390E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0043FABF-8F8F-4AA6-B95A-DAAF50B2390E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D4D6989-BAEF-4E81-AD72-9058EBC7B911}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D4D6989-BAEF-4E81-AD72-9058EBC7B911}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D4D6989-BAEF-4E81-AD72-9058EBC7B911}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D4D6989-BAEF-4E81-AD72-9058EBC7B911}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

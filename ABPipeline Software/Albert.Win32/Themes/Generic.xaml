@@ -15,6 +15,72 @@
 
 	<!--#endregion -->
 	
+	<!--#region Thumbnail Control  -->
+	<Style  TargetType="desktop:ThumbnailControl">
+
+
+		<Setter Property="Width" Value="1920" />
+		<Setter Property="Height" Value="1080" />
+		<Setter Property="FontSize" Value="40" />
+
+
+		<Setter  Property="Template">
+			
+			<Setter.Value>
+				<ControlTemplate TargetType="desktop:ThumbnailControl">
+					<Border CornerRadius="{TemplateBinding CornerRadius}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}">
+					
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition Height="auto" />
+								<RowDefinition />
+								<RowDefinition Height="auto" />
+							</Grid.RowDefinitions>
+
+
+
+							<!-- Header -->
+							<ContentPresenter Grid.Row="0" Content="{TemplateBinding Header}" />
+
+							<!-- Topic and Content Section -->
+							<Grid Grid.Row="1">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition />
+									<ColumnDefinition Width="auto" />
+								</Grid.ColumnDefinitions>
+								<Viewbox Stretch="Uniform">
+								
+										<Image Source="{TemplateBinding TopicSource}" Stretch="UniformToFill" />
+								
+								</Viewbox>
+								<ContentPresenter VerticalAlignment="Center" Grid.Column="1"  Content="{TemplateBinding Content}" />
+
+							</Grid>
+
+							<!-- Footer and Logo  -->
+							<Grid Grid.Row="2">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition />
+									<ColumnDefinition Width="auto" />
+								</Grid.ColumnDefinitions>
+								<!-- Footer -->
+								<ContentPresenter VerticalAlignment="Center" Grid.Column="0" Content="{TemplateBinding Footer}" />
+								<!-- Logo -->
+								<Image Grid.Column="1" Width="200" Height="200" Margin="3" Stretch="Uniform" Source="{TemplateBinding LogoSource}" />
+
+							</Grid>
+						</Grid>
+					
+						
+						
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		
+	</Style>
+	
+	<!--#endregion -->
 	
 	<!--#region ViewControlWithTItle -->
 	<Style TargetType="desktop:TitleControl">

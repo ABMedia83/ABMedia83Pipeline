@@ -23,7 +23,8 @@ global using ABPipeline.Model;
 global using ABPipeline.View;
 global using ABPipeline.ViewModels;
 global using ABPipeline.Controls;
-global using ABPipeline.Components;
+global using ABPipeline.Components;//
+global using ABPipelineCMD;
 
 namespace ABDesignerHub;
 

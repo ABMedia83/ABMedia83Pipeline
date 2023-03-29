@@ -16,7 +16,7 @@ public partial class QuickSketch : PipelineControl
     {
         base.Init();
 
-        //sizeComboBox Lamba Selection Lamba 
+        //sizeComboBox Lamba Selection Expression  
         sizeComboBox.SelectionChanged += (sender, e) =>
         {
             FormatItem item = (FormatItem)sizeComboBox.SelectedItem;
@@ -29,7 +29,11 @@ public partial class QuickSketch : PipelineControl
 
         };
 
-
+        //brushSizeSlider Lamba Expresion 
+        brushSIzeSlider.ValueChanged += (sender, e) =>
+        {
+            drawCanvas.BrushSize = e.NewValue;
+        };
         //Export COmmand 
         AddCommand(DesktopCommands.Export, (sender, e) =>
         {
@@ -79,6 +83,14 @@ public partial class QuickSketch : PipelineControl
             case "Marker": drawCanvas.BrushOpacity = 125; break;
             case "Pen": drawCanvas.BrushOpacity = 255; break;
         }
+    }
+    /// <summary>
+    /// Get or set the DrawCanvas 
+    /// </summary>
+    public DrawCanvas Canvas
+    {
+        get => drawCanvas;
+        set => drawCanvas = value;
     }
     /// <summary>
     /// Get or set the Brush Size 

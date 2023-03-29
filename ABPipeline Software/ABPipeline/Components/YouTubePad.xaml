@@ -60,7 +60,7 @@
 			<GridSplitter Grid.Row="1" Style="{StaticResource horzSplit}" />
 
 			<c:TitleControl Title="Comments:" Grid.Row="2">
-				<c:WriterBox x:Name="commentWriterBox" />
+				<c:WriterBox x:Name="commentWriterBox"  />
 			</c:TitleControl>
 
 		</Grid>
@@ -74,14 +74,101 @@
 			<c:ViewTabItem Header="Thumbnail">
 				<Grid>
 					<Grid.RowDefinitions>
-						<RowDefinition Height="auto" />
+						<RowDefinition Height="auto " />
+						<RowDefinition />
+						<RowDefinition Height="30" />
 						<RowDefinition />
 					</Grid.RowDefinitions>
-					<c:ZoomBox Grid.Row="1">
-						<Grid Background="{StaticResource Primary}" Width="1920" Height="1080">
+					<!-- ToolBar Tray -->
+					<ToolBarTray DataContext="{StaticResource presetViewModel}">
+						<ToolBar >
+							<ComboBox x:Name="backgroundComboBox" ToolTip="Select Background" ItemTemplate="{StaticResource BrushList}" Width="120"   ItemsSource="{Binding PresetBackgroundBrushes}" />
+							<ComboBox x:Name="templateComboBox" ToolTip="Select  Template" ItemTemplate="{StaticResource basicList}"  Width="140" ItemsSource="{Binding YoutubeThumbnailPreset}" />
+							<c:PushButton ToolTip="Export Thumbnail" x:Name="exportPushButton" Source="/Resources/appbar/export.png" />
+						</ToolBar>
+					</ToolBarTray>
+					<Grid Grid.Row="1">
+					
+								<Grid>
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition />
+										<ColumnDefinition />
+										<ColumnDefinition />
+										<ColumnDefinition />
+									</Grid.ColumnDefinitions>
+ 
+									<c:TitleControl Title="Title" Margin="5" >
+								<Grid>
+									<Grid.RowDefinitions>
+										<RowDefinition />
+										<RowDefinition Height="auto" />
+									</Grid.RowDefinitions>
+									<TextBox x:Name="titleTextBox" Text="{Binding ElementName=titleRun, Path=Text}" />
+									<Slider Grid.Row="1" x:Name="titleSlider" Minimum="55" Value="80" Maximum="180" />
+								</Grid>
+							</c:TitleControl>
+									<c:TitleControl Grid.Column="1" Title="Content" Margin="5" >
+								<Grid>
+									<Grid.RowDefinitions>
+										<RowDefinition />
+										<RowDefinition Height="auto" />
+									</Grid.RowDefinitions>
+									<c:WriterBox  x:Name="WriterBox" Text="{Binding ElementName=contentTextBlock, Path=Text}" />
+									<Slider Grid.Row="1" x:Name="contentSlider" Minimum="40" Value="75" Maximum="140" />
+								</Grid>
+							</c:TitleControl>
+									<c:TitleControl Grid.Column="2" Title="Footer" Margin="5" >
+								<Grid>
+									<Grid.RowDefinitions>
+										<RowDefinition />
+										<RowDefinition Height="auto" />
+									</Grid.RowDefinitions>
+									<TextBox x:Name="footerTextBox" Text="{Binding ElementName=footerRun, Path=Text}" />
+									<Slider Grid.Row="1" x:Name="footerSlider" Minimum="55" Value="80" Maximum="140" />
+								</Grid>
+							</c:TitleControl>
+									<c:TitleControl Grid.Column="3"  Title="Image Url's">
+										<StackPanel>
+											<TextBlock>
+												<Run>Topic Image:</Run> <Run x:Name="topicRun" />
+											</TextBlock>
+											<c:PushButton x:Name="topicPushButton" Click="Url_Click" Tag="Topic" ToolTip="Load a Topic Image" Content="..." />
+											<TextBlock>
+												<Run>Logo Image:</Run> <Run x:Name="logoRun" />
+											</TextBlock>
+											<c:PushButton x:Name="logoPushButton" Click="Url_Click" Tag="Logo" ToolTip="Load a Topic Image" Content="..." />
+										</StackPanel>
+									</c:TitleControl>
+
+								</Grid>
+						
+					</Grid>
+					<GridSplitter Style="{StaticResource horzSplit}" Grid.Row="2" />
+					<c:ZoomBox Zoom="15" ToolTip="Preview" Grid.Row="3">
+						<c:ThumbnailControl x:Name="thumbNail" FontFamily="Urbanist" LogoSource="/Resources/Images/ABLogo.png" TopicSource="/Resources/Images/ABPaint_1.png" Style="{StaticResource YoutubeOne}">
+							<TextBlock Margin="40" VerticalAlignment="Center" MinWidth="0" TextWrapping="Wrap" x:Name="contentTextBlock" Width="800" FontSize="60">
+									
+							</TextBlock>
+							<c:ThumbnailControl.Header>
+						
+
+								<TextBlock TextAlignment="Center" Margin="50" FontSize="80">
+									<Run x:Name="titleRun" FontWeight="Black">Test Header</Run>
 							
-						</Grid>
+									
+								</TextBlock>
+							</c:ThumbnailControl.Header>
+							<c:ThumbnailControl.Footer>
+
+
+								<TextBlock TextAlignment="Center" Margin="50" FontSize="80">
+									<Run x:Name="footerRun">Test Footer</Run>
+								</TextBlock>
+							</c:ThumbnailControl.Footer>
+						</c:ThumbnailControl>
 					</c:ZoomBox>
+					
+
 				</Grid>
 			</c:ViewTabItem>
 			

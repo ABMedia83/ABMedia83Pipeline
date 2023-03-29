@@ -9,6 +9,9 @@ public partial class CodePipeline : PipelinePage
     public CodePipeline()
     {
         InitializeComponent();
+        Init();
+        //ViewModel Logic 
+        Pipeline.CodeTab = codeTabControl;
     }
 
 
