@@ -68,6 +68,8 @@ public sealed partial class MainShell : PipelineShell
                             default:
                                 var devFile = new DevPad(Pipeline!.CodeTab!, info);
                                 State = PipelineState.Code;
+                                //Add to the Recent File Page 
+                                Pipeline.Files.Add(new(info));
                                 break;
                         }
                     }
@@ -94,7 +96,61 @@ public sealed partial class MainShell : PipelineShell
 
         #endregion
 
-        #region Import/Export/Close Lamba
+        #region Import/Export Events 
+
+        OnExportSettings += (file) =>
+        {
+            //Create your Pipeline Settings 
+            PipelineSettings settings = new()
+            {
+                FormatAuthor = "Albert M. Byrd",
+                FormatDescription = "Basic settings for the Shell of the Application",
+                FormatName = "APPipeline Settings",
+                WindowState = WindowState,
+                ShowStatusBar = statusMenuItem.IsChecked,
+                Logs = Pipeline!.Logs,
+                RecentFiles = Pipeline.Files,
+                State = State
+            };
+
+            //Save your Pipeline Settings 
+            WriteToJsonFile(settings, file);
+
+
+            //Export your other settings here 
+            WebPipeLine!.ExportSettings(webPipelinePath);
+
+        };
+
+        OnImoortSettings += (file) =>
+        {
+            //Load your main Pipeline settings 
+            var settings = ReadFromJsonFile<PipelineSettings>(file);
+
+            //Pattern Matching 
+            (WindowState, State, Pipeline!.Logs, Pipeline.Files) = (settings.WindowState, settings.State, settings.Logs!, settings.RecentFiles!);
+            statusMenuItem.IsChecked = settings.ShowStatusBar;
+
+            //Set the Receent Files 
+            Pipeline.Files = settings.RecentFiles!;
+
+            //Set the Status Visiblity 
+            var statusShow = settings.ShowStatusBar switch
+            {
+                true => statusBar.Visibility = Visibility.Visible,
+                false => statusBar.Visibility = Visibility.Collapsed,
+            };
+
+            //Import Other settings 
+            WebPipeLine!.ImportSettings(webPipelinePath);
+        };
+
+
+
+
+        #endregion
+
+        #region Loading and Clean up 
 
 
         ImportSettings(mainSettingsPath);
@@ -163,53 +219,8 @@ public sealed partial class MainShell : PipelineShell
         newDialog.Hide();
     }
 
-    public override void ExportSettings(string _filePath)
-    {
-        //Create your Pipeline Settings 
-        PipelineSettings settings = new()
-        {
-            FormatAuthor = "Albert M. Byrd",
-            FormatDescription = "Basic settings for the Shell of the Application",
-            FormatName = "APPipeline Settings",
-            WindowState = WindowState,
-            ShowStatusBar = statusMenuItem.IsChecked,
-            Logs = Pipeline!.Logs,
-            RecentFiles = Pipeline.Files,
-            State = State
-        };
-
-        //Save your Pipeline Settings 
-        WriteToJsonFile(settings, _filePath);
-
-        //Export your other settings here 
-        WebPipeLine!.ExportSettings(webPipelinePath);
 
 
-    }
-
-    public override void ImportSettings(string _filePath)
-    {
-        if (Exists(_filePath))
-        {
-            //Load your main Pipeline settings 
-            var settings = ReadFromJsonFile<PipelineSettings>(_filePath);
-
-            //Pattern Matching 
-            (WindowState, State, Pipeline!.Logs, Pipeline.Files) = (settings.WindowState, settings.State, settings.Logs!, settings.RecentFiles!);
-            statusMenuItem.IsChecked = settings.ShowStatusBar;
-            //Set the Status Visiblity 
-            var statusShow = settings.ShowStatusBar switch
-            {
-                true => statusBar.Visibility = Visibility.Visible,
-                false => statusBar.Visibility = Visibility.Collapsed,
-            };
-
-            //Import Other settings 
-            WebPipeLine!.ImportSettings(webPipelinePath);
-
-   
-        }
-    }
 
     public PipelineState State
     {
