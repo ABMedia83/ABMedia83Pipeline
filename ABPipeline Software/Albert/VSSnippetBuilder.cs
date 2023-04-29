@@ -43,7 +43,7 @@ public class VSSnippetBuilder : Notify
         set { language = value; OnPropertyChanged("CodeLanguage"); }
     }
 
-    public required string? Code
+    public  string? Code
     {
         get => code;
         set { code = value; OnPropertyChanged("Code"); }

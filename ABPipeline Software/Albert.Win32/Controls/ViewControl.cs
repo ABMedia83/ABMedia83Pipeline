@@ -1,6 +1,8 @@
 ﻿
 namespace Albert.Win32.Controls;
 
+public delegate void SettingsEventHandler(string _filePath);
+
 /// <summary>
 /// A special ContentControl desinged to work with a Tab Interface and the MVVM Pattern
 /// </summary>
@@ -21,9 +23,9 @@ public class ViewControl : ContentControl, IAddCommand
     {
         //ReDraw the Control 
         DefaultStyleKey = typeof(ViewControl);
-      
+
     }
-     
+
     /// <summary>
     /// Remove Tab Method  
     /// </summary>
@@ -32,7 +34,17 @@ public class ViewControl : ContentControl, IAddCommand
         TabItem?.RemoveTab();
     }
 
-
+    #region Set Current File Method 
+    /// <summary>
+    /// Metheod allows you to quickly set the Cuurrent FIle and it's info. This can also be oover written or more functonalit
+    /// </summary>
+    /// <param name="_info">File Information</param>
+    public virtual void SetCurrentFile(FileInfo _info)
+    {
+        FileInfo = _info;
+        CurrentFile = _info.FullName;
+    }
+    #endregion
 
 
     #region Tab and Initialize Method's 
@@ -189,15 +201,35 @@ public class ViewControl : ContentControl, IAddCommand
 
 
     #region Import and Export Settings Method 
-
-    public virtual void ExportSettings(string _str)
+    /// <summary>
+    /// Event Executes on ExportSettins Method 
+    /// </summary>
+    public event SettingsEventHandler? OnExportSettings; 
+    /// <summary>
+    /// Event Exectutes on ImportSeettings method 
+    /// </summary>
+    public event SettingsEventHandler? OnImoortSettings;
+    /// <summary>
+    /// Method Export any Settings you havee for this Control 
+    /// </summary>
+    /// <param name="_str"></param>
+    public void ExportSettings(string? _str)
     {
-
+        //Run the OnExportSettings Event 
+        OnExportSettings!.Invoke(_str!);
     }
 
-    public virtual void ImportSettings(string _str)
+ 
+    /// <summary>
+    /// Method Imports any settings you have for this control 
+    /// </summary>
+    /// <param name="_str"></param>
+    public void ImportSettings(string? _str)
     {
-
+        if(Exists(_str))
+        {
+            OnImoortSettings!.Invoke(_str);
+        }
     }
 
     #endregion 

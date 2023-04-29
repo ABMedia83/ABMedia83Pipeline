@@ -15,7 +15,8 @@ global using System.Windows.Ink;
 global using Albert;
 global using static System.Text.Json.JsonSerializer;
 global using static Albert.Formatter;
-global using Albert.Win32.Controls; 
+global using Albert.Win32.Controls;
+global using static System.IO.File;
 global using static Albert.Win32.MediaConvert;
 global using static Albert.Win32.Win32IO;
 

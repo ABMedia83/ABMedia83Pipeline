@@ -77,8 +77,6 @@ C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\obj\Release\net7.0-w
 C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\obj\Release\net7.0-windows\Components\WriterPad.baml
 C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\obj\Release\net7.0-windows\Components\RichTextPad.g.cs
 C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\obj\Release\net7.0-windows\Components\RichTextPad.baml
-C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\obj\Release\net7.0-windows\Components\RichhTextPad.g.cs
-C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\obj\Release\net7.0-windows\Components\RichhTextPad.baml
 C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\obj\Release\net7.0-windows\View\WebPipeline.g.cs
 C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\obj\Release\net7.0-windows\View\WebPipeline.baml
 C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\obj\Release\net7.0-windows\Components\QuickSketch.g.cs
@@ -93,5 +91,15 @@ C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\bin\Release\net7.0-w
 C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\bin\Release\net7.0-windows\ABPipelineCMD.dll
 C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\bin\Release\net7.0-windows\ABPipelineCMD.pdb
 C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\obj\Release\net7.0-windows\Resources\Styles\ThumbnailTypes.baml
-C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\obj\Release\net7.0-windows\View\PipelineSettingsPage.g.cs
-C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\obj\Release\net7.0-windows\View\PipelineSettingsPage.baml
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\obj\Release\net7.0-windows\Components\ColorLab.g.cs
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\obj\Release\net7.0-windows\Components\ColorLab.baml
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\obj\Release\net7.0-windows\Components\SnippetPad.g.cs
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\bin\Release\net7.0-windows\Google.Apis.dll
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\bin\Release\net7.0-windows\Google.Apis.Auth.PlatformServices.dll
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\bin\Release\net7.0-windows\Google.Apis.Auth.dll
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\bin\Release\net7.0-windows\Google.Apis.Core.dll
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\bin\Release\net7.0-windows\Google.Apis.YouTube.v3.dll
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\bin\Release\net7.0-windows\Newtonsoft.Json.dll
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\obj\Release\net7.0-windows\Components\SnippetPad.baml
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\obj\Release\net7.0-windows\Components\RecentFilesPad.g.cs
+C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\obj\Release\net7.0-windows\Components\RecentFilesPad.baml

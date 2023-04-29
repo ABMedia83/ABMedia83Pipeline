@@ -17,7 +17,8 @@
 		<!-- Toolbar Section -->
 		<ToolBarTray>
 			<ToolBar>
-				<ComboBox x:Name="fontComboBox" Width="140" ToolTip="Choose your Font Type" />
+				<ComboBox x:Name="styleComboBox" ItemsSource="{Binding NoteStylePrests}" ItemTemplate="{StaticResource noteStyle}" Width="140" />
+				<ComboBox ToolTip="Select Font Family" x:Name="fontComboBox" ItemTemplate="{StaticResource basicList}" Width="140" ItemsSource="{Binding NoteFontPresets}" />
 				<Slider x:Name="fontSizeSlider" Value="18" Minimum="15" Maximum="150" ToolTip="Choose the Font Size" />
 			</ToolBar>
 		</ToolBarTray>

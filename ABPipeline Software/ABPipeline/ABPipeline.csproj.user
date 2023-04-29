@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Components\ColorLab.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Components\DevPad.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -16,10 +19,13 @@
     <Compile Update="Components\QuickSketch.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Components\RichhTextPad.xaml.cs">
+    <Compile Update="Components\RecentFilesPad.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Components\RichTextPad.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Components\SnippetPad.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Components\YouTubePad.xaml.cs">
@@ -34,14 +40,14 @@
     <Compile Update="View\NotesPipeline.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\PipelineSettingsPage.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="View\WebPipeline.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Components\ColorLab.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Components\DevPad.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -51,10 +57,13 @@
     <Page Update="Components\QuickSketch.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Components\RichhTextPad.xaml">
+    <Page Update="Components\RecentFilesPad.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Components\RichTextPad.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Components\SnippetPad.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Components\YouTubePad.xaml">
@@ -82,9 +91,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\NotesPipeline.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\PipelineSettingsPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\WebPipeline.xaml">

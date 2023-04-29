@@ -51,6 +51,29 @@ public sealed partial class DevPad : PipelineControl
     public override void Init()
     {
         base.Init();
+
+        styleComboBox.SelectionChanged += (sender, e) =>
+        {
+            NoteStyle item = (NoteStyle)styleComboBox.SelectedItem;
+
+            codeTextEditor.Foreground = item.TextBrush;
+            codeTextEditor.Background = item.Background;
+        
+        };
+
+        fontComboBox.SelectionChanged += (sender, e) =>
+        { 
+            FontItem item  = (FontItem)fontComboBox.SelectedItem;  
+            codeTextEditor.FontFamily = item.FontFamily;
+        };
+
+        fontSizeSlider.ValueChanged += (sender, e) =>
+        {
+            codeTextEditor.FontSize = e.NewValue;
+        };
+
+
+
         ProjectType = "Code File";
     }
 }

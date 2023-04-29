@@ -44,8 +44,6 @@
 			<MenuItem Header="Window">
 				<MenuItem Click="Window_Click" Header="Code Pipeline" Tag="Code" />
 				<MenuItem Click="Window_Click" Header="Design Pipeline" Tag="Design" />
-				<MenuItem Click="Window_Click" Header="Media Pipeline" Tag="Media" />
-				<MenuItem Click="Window_Click" Header="Notes Pipeline" Tag="Notes" />
 				<MenuItem Click="Window_Click" Header="Web Pipeline" Tag="Web" />
 	
 			</MenuItem>
@@ -57,7 +55,7 @@
 		</Menu>
 
 		<!-- Frame -->
-		<c:ViewFrame x:Name="mainFrame" Grid.Row="1" />
+		<Frame x:Name="mainFrame" Grid.Row="1" />
 		<!-- Dialogs -->
 		<c:ViewDialog Grid.Row="1" x:Name="newDialog" IsButtonsHidden="True">
 			<Grid>

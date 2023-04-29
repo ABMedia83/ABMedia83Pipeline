@@ -12,6 +12,9 @@ public class PipelineControl: ViewControl, IPipelineBase
     /// </summary>
     public PipelineViewModel? Pipeline => App.AppHost?.Services.GetService<PipelineViewModel>();
 
+    /// <summary>
+    /// Init the Pipeline ViewModel with this base method 
+    /// </summary>
     public override void Init()
     {
         //Set the DataContext to the ViewModel 

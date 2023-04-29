@@ -3,7 +3,7 @@
 namespace ABPipeline.Components;
 
 /// <summary>
-/// Interaction logic for RichTextPad.xaml
+/// Component is desnted to prepare Rich Text Documents 
 /// </summary>
 public partial class RichTextPad : PipelineControl
 {

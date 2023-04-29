@@ -33,10 +33,10 @@ namespace Albert
         public static T ReadFromJsonFile<T>(string _fileName)
         {
             //Put the Json into a string 
-            string? json = ReadAllText(_fileName);          
+            string? json = ReadAllText(_fileName!);          
             
             //Convert it into the Type 
-            return Deserialize<T>(json);
+            return Deserialize<T>(json!)!;
         }
 
 

@@ -9,6 +9,8 @@
       Title="NotesPipeline">
 
     <Grid>
-        
+		<TabControl x:Name="noteTabControl">
+			
+		</TabControl> 
     </Grid>
 </local:PipelinePage>

@@ -11,7 +11,7 @@ public sealed class PipelineViewModel : ViewModel
 {
     #region Field's 
     WebPipelineSettings? websettings;
-    TabControl? designTab, mediaTab, noteTab, codeTab, webTab;
+    TabControl? designTab, noteTab, codeTab, webTab;
     ModelList<ColorItem>? colors = new();
     ModelList<ThemeItem>? themes = new();
     ModelList<FontItem>? fonts = new();
@@ -25,11 +25,7 @@ public sealed class PipelineViewModel : ViewModel
         set { designTab = value; OnPropertyChanged("DesignTab"); }
 
     }
-    public TabControl? MediaTab
-    {
-        get => mediaTab;
-        set { mediaTab = value; OnPropertyChanged("MediaTab"); }
-    }
+
 
     public TabControl? NoteTab
     {
@@ -55,7 +51,7 @@ public sealed class PipelineViewModel : ViewModel
 
     #region Dynamic Properties 
 
-    public WebPipelineSettings WebSettings
+    public WebPipelineSettings? WebSettings
     {
         get => websettings;
         set { websettings = value; OnPropertyChanged("WebSettings"); }
@@ -148,6 +144,8 @@ public sealed class PipelineViewModel : ViewModel
     public static string? webpipelinesettings => "webpipeline.json";
 
     #endregion
+
+
 
     #region  Default Pages 
 

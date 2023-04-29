@@ -10,7 +10,7 @@ public abstract class ViewModel : Notify, IViewModel
     #region Field's 
 
     TabControl? tab;
-    ViewFrame? frame;
+    Frame? frame;
     ModelList<LogRecord> logs = new ModelList<LogRecord>();
     ModelList<FileRecord> files = new ModelList<FileRecord>();
     string? title;
@@ -113,7 +113,7 @@ public abstract class ViewModel : Notify, IViewModel
     /// <summary>
     /// Get of set the Default Frmae 
     /// </summary>
-    public ViewFrame? Frame
+    public Frame? Frame
     {
         get => frame;
         set { frame = value; OnPropertyChanged("Frame"); }

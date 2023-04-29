@@ -16,5 +16,5 @@ public sealed record WebPipelineSettings: JsonRecord
     public string? ThumbFooter { get; init; }
     public string? TopicSource { get; init; }
     public string? LogoSource { get; init; }
-    public ModelList<string>? RecentFiles { get; init; }
+    public ModelList<FileRecord>? RecentFiles { get; init; }
 }

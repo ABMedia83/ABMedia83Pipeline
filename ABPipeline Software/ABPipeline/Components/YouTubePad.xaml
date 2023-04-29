@@ -84,7 +84,8 @@
 						<ToolBar >
 							<ComboBox x:Name="backgroundComboBox" ToolTip="Select Background" ItemTemplate="{StaticResource BrushList}" Width="120"   ItemsSource="{Binding PresetBackgroundBrushes}" />
 							<ComboBox x:Name="templateComboBox" ToolTip="Select  Template" ItemTemplate="{StaticResource basicList}"  Width="140" ItemsSource="{Binding YoutubeThumbnailPreset}" />
-							<c:PushButton ToolTip="Export Thumbnail" x:Name="exportPushButton" Source="/Resources/appbar/export.png" />
+							
+							<c:PushButton ToolTip="Export Thumbnail" Click="Export_Click" x:Name="exportPushButton" Source="/Resources/appbar/export.png" />
 						</ToolBar>
 					</ToolBarTray>
 					<Grid Grid.Row="1">
@@ -113,7 +114,7 @@
 										<RowDefinition />
 										<RowDefinition Height="auto" />
 									</Grid.RowDefinitions>
-									<c:WriterBox  x:Name="WriterBox" Text="{Binding ElementName=contentTextBlock, Path=Text}" />
+									<c:WriterBox  x:Name="contentWriterBox" Text="{Binding ElementName=contentTextBlock, Path=Text}" />
 									<Slider Grid.Row="1" x:Name="contentSlider" Minimum="40" Value="75" Maximum="140" />
 								</Grid>
 							</c:TitleControl>

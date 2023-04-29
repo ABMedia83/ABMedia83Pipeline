@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "qNPpvcCJpEPHU/2FV6T2rFupl87rzKcsYVrGl7cj2HKc+8WGkBNHf63+02cHQy11CKCPq5GbeE3WX/aXKo5Lsg==",
+  "dgSpecHash": "StjYoQaphUfh0NN9D2eJ9AWfIONn2rMt4mSlAoPB+fIg0RYX3O6ta2SQ6RLpScA83VCrE4OucMt5wR0YTru2Yw==",
   "success": true,
   "projectFilePath": "C:\\AMB\\Git\\ABMedia83Pipeline\\ABPipeline Software\\ABPipeline\\ABPipeline.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alxp2\\.nuget\\packages\\avalonedit\\6.2.0.78\\avalonedit.6.2.0.78.nupkg.sha512",
+    "C:\\Users\\alxp2\\.nuget\\packages\\google.apis\\1.60.0\\google.apis.1.60.0.nupkg.sha512",
+    "C:\\Users\\alxp2\\.nuget\\packages\\google.apis.auth\\1.60.0\\google.apis.auth.1.60.0.nupkg.sha512",
+    "C:\\Users\\alxp2\\.nuget\\packages\\google.apis.core\\1.60.0\\google.apis.core.1.60.0.nupkg.sha512",
+    "C:\\Users\\alxp2\\.nuget\\packages\\google.apis.youtube.v3\\1.60.0.2945\\google.apis.youtube.v3.1.60.0.2945.nupkg.sha512",
     "C:\\Users\\alxp2\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\alxp2\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\alxp2\\.nuget\\packages\\microsoft.extensions.configuration.binder\\7.0.0\\microsoft.extensions.configuration.binder.7.0.0.nupkg.sha512",
@@ -31,6 +35,7 @@
     "C:\\Users\\alxp2\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\7.0.0\\microsoft.extensions.options.configurationextensions.7.0.0.nupkg.sha512",
     "C:\\Users\\alxp2\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\alxp2\\.nuget\\packages\\microsoft.web.webview2\\1.0.1518.46\\microsoft.web.webview2.1.0.1518.46.nupkg.sha512",
+    "C:\\Users\\alxp2\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512",
     "C:\\Users\\alxp2\\.nuget\\packages\\system.diagnostics.eventlog\\7.0.0\\system.diagnostics.eventlog.7.0.0.nupkg.sha512",
     "C:\\Users\\alxp2\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\alxp2\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"

@@ -69,26 +69,42 @@ namespace Albert.Win32.Controls
 
         #endregion
 
-        #region Override Import and Export Settings method's 
-
-        public virtual void ImportSettings(string _filePath)
+        #region Import and Export Settings Method 
+        /// <summary>
+        /// Event Executes on ExportSettins Method 
+        /// </summary>
+        public event SettingsEventHandler? OnExportSettings;
+        /// <summary>
+        /// Event Exectutes on ImportSeettings method 
+        /// </summary>
+        public event SettingsEventHandler? OnImoortSettings;
+        /// <summary>
+        /// Method Export any Settings you havee for this Control 
+        /// </summary>
+        /// <param name="_str"></param>
+        public void ExportSettings(string? _str)
         {
-
+            //Run the OnExportSettings Event 
+            OnExportSettings!.Invoke(_str!);
         }
-        public virtual void ExportSettings(string _filePath)
+
+
+        /// <summary>
+        /// Method Imports any settings you have for this control 
+        /// </summary>
+        /// <param name="_str"></param>
+        public void ImportSettings(string? _str)
         {
-
+            if (Exists(_str))
+            {
+                OnImoortSettings!.Invoke(_str);
+            }
         }
-           
 
-        #endregion 
-        public void InitFrame(ViewFrame _frame)
-        {
-            Frame = _frame;
-            Frame.Navigate(this);
-        }
+        #endregion
+
         
-        public ViewFrame? Frame { get; set; }
+        public Frame? Frame { get; set; }
 
 
         

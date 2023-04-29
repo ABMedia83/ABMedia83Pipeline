@@ -27,36 +27,55 @@ public partial class WebPipeline : PipelinePage
     {
         base.Init();
         Pipeline!.WebTab = webTabControl;
-    }
 
-    public override void ExportSettings(string _filePath)
-    {
-
-        WebPipelineSettings settings = new()
+        //Export Settings Lamba 
+        OnExportSettings += (file) =>
         {
-            FormatAuthor = "Albert M. Byrd",
-            FormatDescription = "Stores the Web Pipeline Settings",
-            FormatName = "WebPipeline Settings",
-    
             
+            WebPipelineSettings settings = new()
+            {
+                FormatAuthor = "Albert M. Byrd",
+                FormatDescription = "Stores the Web Pipeline Settings",
+                FormatName = "WebPipeline Settings",
+                Notes = youTubePad.Notes,
+                Desciptionn = youTubePad.Description,
+                Comment = youTubePad.Comment,
+                Tags = youTubePad.Tags,
+                ThumbTitle = youTubePad.Title,
+                ThumbContent = youTubePad.ThumbContent,
+                ThumbFooter = youTubePad.Footer,
+                TopicSource = youTubePad.TopicSource.ToString(),
+                LogoSource = youTubePad.LogoSource.ToString()
+            };
+
+
+            //Write to Json File Format 
+            WriteToJsonFile(settings, file);
+
+        };
+        
+        //Import Settigns Lamba 
+        OnImoortSettings += (file) => 
+        {
+            Pipeline!.WebSettings = ReadFromJsonFile<WebPipelineSettings>(file);
+
+            //Unload Settings 
+            youTubePad.Notes = Pipeline.WebSettings.Notes;
+            youTubePad.Description = Pipeline.WebSettings.Desciptionn;
+            youTubePad.Tags = Pipeline.WebSettings.Tags;
+            youTubePad.Comment = Pipeline.WebSettings.Comment;
+            youTubePad.titleRun.Text = Pipeline.WebSettings.ThumbTitle;
+            youTubePad.contentTextBlock.Text = Pipeline.WebSettings.ThumbContent;
+            youTubePad.footerRun.Text = Pipeline.WebSettings.ThumbFooter;
+            //Load Image Sources 
+            youTubePad.TopicSource  = LoadSource(Pipeline.WebSettings.TopicSource!);
+            youTubePad.LogoSource = LoadSource(Pipeline.WebSettings.LogoSource!);
+
         };
 
-        //Write to Json File Format 
-        WriteToJsonFile(settings,_filePath);
-
     }
 
-    public override void ImportSettings(string _filePath)
-    {
-        if(Exists(_filePath))
-        {
-            Pipeline!.WebSettings = ReadFromJsonFile<WebPipelineSettings>(_filePath);
-         
 
-
-       
-        }
-    }
 
 
 }

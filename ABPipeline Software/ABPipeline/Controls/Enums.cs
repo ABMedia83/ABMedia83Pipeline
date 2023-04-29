@@ -7,6 +7,10 @@ public enum PipelineState
     Code,Design,Notes,Web,PDFViewer,WebViewer
 }
 
+public enum SnippetMode
+{
+    VisualStudio, VisualStudioCode 
+}
 
 public enum PDFViewMode
 {

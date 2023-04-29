@@ -1,11 +1,13 @@
 ﻿C:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\obj\Release\net7.0-windows\GeneratedInternalTypeHelper.g.cs
 FC:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\App.xaml;;
+FC:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\Components\ColorLab.xaml;;
 FC:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\Components\ConceptPad.xaml;;
 FC:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\Components\DevPad.xaml;;
 FC:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\Components\MemePad.xaml;;
 FC:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\Components\QuickSketch.xaml;;
-FC:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\Components\RichhTextPad.xaml;;
+FC:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\Components\RecentFilesPad.xaml;;
 FC:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\Components\RichTextPad.xaml;;
+FC:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\Components\SnippetPad.xaml;;
 FC:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\Components\WriterPad.xaml;;
 FC:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\Components\YouTubePad.xaml;;
 FC:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\Resources\Styles\DataTemp.xaml;;
@@ -16,6 +18,5 @@ FC:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\View\CodePipeline.x
 FC:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\View\DesignPipeline.xaml;;
 FC:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\View\MainShell.xaml;;
 FC:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\View\NotesPipeline.xaml;;
-FC:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\View\PipelineSettingsPage.xaml;;
 FC:\AMB\Git\ABMedia83Pipeline\ABPipeline Software\ABPipeline\View\WebPipeline.xaml;;
 

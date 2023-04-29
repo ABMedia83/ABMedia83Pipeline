@@ -5,7 +5,7 @@
 namespace Albert;
 
 /// <summary>
-/// Record stores a File Path and Directory location 
+/// Record stores a File Path and Directory location for list 
 /// </summary>
 public record FileRecord
 {
@@ -13,6 +13,14 @@ public record FileRecord
     {
         //Do Nothing 
     } 
+    public FileRecord(FileInfo? _info)
+    {
+        FullName = _info!.FullName;
+        Name = _info.Name;
+        DirectoryName = _info.DirectoryName;
+        Extension = _info.Extension;
+        
+    }
     public FileRecord(string _file)
     {
        FileInfo Info = new FileInfo(_file);
@@ -33,8 +41,8 @@ public record FileRecord
     public string? Extension { get; init; }
 
     public override string ToString()
-    {
-        return $"Name: {Name}\nDirectory: {DirectoryName}\nExtension: {Extension}";
+    { 
+        return $"Name: {Name}";
     }
 
 }

@@ -11,7 +11,7 @@ public partial class CodePipeline : PipelinePage
         InitializeComponent();
         Init();
         //ViewModel Logic 
-        Pipeline.CodeTab = codeTabControl;
+        Pipeline!.CodeTab = codeTabControl;
     }
 
 

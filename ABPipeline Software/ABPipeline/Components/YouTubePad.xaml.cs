@@ -1,4 +1,7 @@
 ﻿
+
+
+
 namespace ABPipeline.Components;
 
 /// <summary>
@@ -16,6 +19,8 @@ public sealed partial class YouTubePad : PipelineControl
         InitializeComponent();
         Init();
         CreateTab($"YoutubeDocument{Count++}", _tab, Close);
+
+        
         
     }
 
@@ -29,7 +34,7 @@ public sealed partial class YouTubePad : PipelineControl
     public override void Init()
     {
         base.Init();
-
+        #region Lamba's 
         backgroundComboBox.SelectionChanged += (sender, e) =>
         {
             BrushItem? brush = backgroundComboBox!.SelectedItem as BrushItem;
@@ -74,11 +79,48 @@ public sealed partial class YouTubePad : PipelineControl
             tagsWriterBox.Text = Pipeline!.WebSettings.Tags;
             commentWriterBox.Text = Pipeline!.WebSettings.Comment;
         }
-   
+        #endregion
+
+
+        #region Commands 
+
+        //Save Command 
+        AddCommand(ApplicationCommands.Save, (sender, e) =>
+        {
+            if (CurrentFile != null)
+            {
+
+            }
+            else if(CurrentFile == null)
+            {
+                
+            }
+        });
+
+        //Save As Command 
+        AddCommand(DesktopCommands.SaveAs , (sender, e) =>
+        {
+
+
+        });
+
+
+
+        #endregion 
+
 
 
     }
 
+    void Export_Click (object sender, RoutedEventArgs e)
+    {
+        SaveDialogTask("Export Thumbnail", "PNG Images(.png)|*.png", (s, i) =>
+        {
+            //Export the Png
+            CreatePng(s.FileName, 96, thumbNail);
+        });
+    }
+       
     void Url_Click(object sender, RoutedEventArgs e) 
     {
         PushButton? push = sender as PushButton; 
@@ -131,8 +173,8 @@ public sealed partial class YouTubePad : PipelineControl
 
     public string? Title
     {
-        get => titleTextBox.Text; 
-        set => titleTextBox.Text = value; 
+        get => titleRun.Text; 
+        set => titleRun.Text = value; 
     }
 
     public string? ThumbContent
@@ -143,8 +185,8 @@ public sealed partial class YouTubePad : PipelineControl
 
     public string? Footer
     {
-        get => footerTextBox.Text; 
-        set => footerTextBox.Text = value;
+        get => footerRun.Text; 
+        set => footerRun.Text = value;
     }
 
     public ImageSource TopicSource

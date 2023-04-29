@@ -9,5 +9,13 @@ public sealed partial class NotesPipeline : PipelinePage
     public NotesPipeline()
     {
         InitializeComponent();
+        Init();
+    }
+
+    public override void Init()
+    {
+        base.Init();
+        Pipeline!.NoteTab = noteTabControl;
+
     }
 }
